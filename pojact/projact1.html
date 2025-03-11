@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styelprojact1.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="homepage">
+        <nav class="navbar">
+           <a class="home" href="/" >Home</a>
+        </nav>
+    </div>
+    <div class="Color_scheme">
+        <h1>Color Scheme Seitcher</h1>
+        <div class="box">
+        <div class="button" id="grey"></div>
+        <div class="button" id="black"></div>
+        <div class="button" id="red"></div>
+        <div class="button" id="white"></div>
+    </div>
+    <h2 class="try">Try clicking on one of the colors above</h2>
+    <span class="try">to change the background Color of this page</span>
+    </div>
+</body>
+<script>
+    const buttons = document.querySelectorAll(".button")
+    const body = document.querySelector("body")
+
+    buttons.forEach( function (button){
+        button.addEventListener("click",function(e) {
+            console.log(e);
+            console.log(e.target);
+            if (e.target.id==='grey') {
+                body.style.backgroundColor = e.target.id;
+            }
+            if (e.target.id==='black') {
+                body.style.backgroundColor = e.target.id;
+            }
+            if (e.target.id==='red') {
+                body.style.backgroundColor = e.target.id;
+            }
+            if (e.target.id==='white') {
+                body.style.backgroundColor = e.target.id;
+            }
+        })   
+    });
+</script>
+</html>
